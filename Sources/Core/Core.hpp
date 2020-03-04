@@ -25,7 +25,7 @@
 #include <algorithm>
 #include <functional>
 
-// Default GIR headers
+// Default Spark headers
 #include <Core/Type.hpp>
 #include <Core/Math.hpp>
 #include <Core/Logger.hpp>
@@ -43,9 +43,9 @@
 #define RAD2DEG (57.2957795131f)
 
 #ifdef SPARK_WARN_UNUSED
-#define SPARK_UNUSED(_var_) gir::Logger::Warn("Unused variable {0}", #var);
+#define SPARK_UNUSED(_var_) gir::Logger::Warn("Unused variable {0}", #_var_);
 #else
-#define SPARK_UNUSED(_var_) (void)var;
+#define SPARK_UNUSED(_var_) (void)_var_;
 #endif
 
 #define SPARK_CHECK(_expr_, _msg_) Spark::Core::Check(_expr_, #_expr_, __FILE__, __LINE__, _msg_)

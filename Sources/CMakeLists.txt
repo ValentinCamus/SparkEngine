@@ -22,7 +22,7 @@ set(ICON_RESOURCE "")
 if (WIN32) #windows icon resource file, provided from /Packaging directory
     set(ICON_RESOURCE "${PROJECT_BINARY_DIR}/SparkEngine.icon.rc")
 elseif (APPLE) #osx icon ressource file, provided from /Packaging directory
-    set(ICON_RESOURCE "${PROJECT_SOURCE_DIR}/Packaging/SparkEngine.icns")
+    set(ICON_RESOURCE "${PROJECT_SOURCE_DIR}/Packaging/SparkEngine.icns" Application/WindowEventListener.hpp Engine/OpenGL/OpenGL.hpp Application/Window.cpp Application/Window.hpp Application/Application.cpp Application/Application.hpp Editor/Editor.cpp Editor/Editor.hpp)
 endif ()
 
 file(GLOB_RECURSE ENGINE_SRCS "*.cpp" "*.hpp" ".inl")
